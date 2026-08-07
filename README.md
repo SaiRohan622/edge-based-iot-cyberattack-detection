@@ -30,19 +30,19 @@ This project is an edge-based IoT cybersecurity solution that monitors MQTT comm
 
 ## 🏗️ System Architecture
 
-![System Architecture](images/architecture.png)
+![System Architecture](images/cyberattack detection architecture.png)
 
 ---
 
 ## 🔀 Node-RED Flow
 
-![Node-RED Flow](images/flow.png)
+![Node-RED Flow](images/flow image.png)
 
 ---
 
 ## 📊 Dashboard
 
-![Dashboard](images/dashboard.png)
+![Dashboard](images/Dashboard.jpeg)
 
 ---
 
