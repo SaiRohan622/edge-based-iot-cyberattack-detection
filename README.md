@@ -2,68 +2,80 @@
 
 ## 📌 Overview
 
-This project is an edge-based IoT cybersecurity solution designed to detect cyberattacks on MQTT-enabled IoT devices and automatically respond to suspicious activities. The system monitors IoT communication in real time using Node-RED and MQTT while displaying security alerts on an interactive dashboard.
+This project is an edge-based IoT cybersecurity solution that monitors MQTT communication, detects suspicious activities, and visualizes device data using a real-time Node-RED dashboard. It demonstrates how edge computing can be used to improve the security and monitoring of IoT environments.
 
 ---
 
 ## 🚀 Features
 
-- Real-time IoT device monitoring
+- Real-time IoT monitoring
 - MQTT communication
-- Cyberattack detection
-- Live security dashboard
-- Automated alert generation
-- Attack logging
-- Edge-based monitoring
+- Node-RED dashboard
+- Edge-based data processing
+- Security event logging
+- Device status monitoring
+- Easy-to-use visual dashboard
 
 ---
 
 ## 🛠️ Technologies Used
 
-- Node-RED
-- MQTT
 - Raspberry Pi Pico W
+- Node-RED
+- MQTT (Mosquitto)
 - Python
 - JSON
 
 ---
 
+## 🏗️ System Architecture
+
+![System Architecture](images/architecture.png)
+
+---
+
+## 🔀 Node-RED Flow
+
+![Node-RED Flow](images/flow.png)
+
+---
+
+## 📊 Dashboard
+
+![Dashboard](images/dashboard.png)
+
+---
+
 ## 📂 Project Structure
 
-```
+```text
 edge-based-iot-cyberattack-detection/
 │
+├── images/
 ├── node-red/
 │   └── flow IOT CYBERATTACK.json
-│
 └── README.md
 ```
 
 ---
 
-## ⚙️ How to Run
+## ⚙️ Setup
 
 1. Install Node-RED.
-2. Install an MQTT broker (Mosquitto).
+2. Install the Mosquitto MQTT Broker.
 3. Import the flow from the `node-red` folder.
 4. Deploy the flow.
-5. Start publishing MQTT messages to monitor IoT devices.
-
----
-
-## 📸 Screenshots
-
-Screenshots of the dashboard and system architecture will be added soon.
+5. Start publishing MQTT messages to visualize data on the dashboard.
 
 ---
 
 ## 🔮 Future Improvements
 
 - AI-based anomaly detection
-- Raspberry Pi Pico W integration
-- Real-time email notifications
-- Cloud dashboard
-- Machine learning-based threat detection
+- Raspberry Pi Pico W hardware integration
+- Cloud monitoring dashboard
+- Email notifications
+- Enhanced automated threat response
 
 ---
 
