@@ -1,0 +1,2065 @@
+[
+    {
+        "id": "82ee9f8d53904e9e",
+        "type": "tab",
+        "label": "IoT Cyberattack Detection",
+        "disabled": false,
+        "info": "Real-time MQTT security monitoring dashboard"
+    },
+    {
+        "id": "8d44182f6aec82a8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6d6697734a385513",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "33cf4f576b4d75bb",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "b0eb88d16b556364",
+        "type": "ui-page",
+        "name": "Weather data",
+        "ui": "6d6697734a385513",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "33cf4f576b4d75bb",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "562609ff1e978a9f",
+        "type": "ui-group",
+        "name": "Tmperature",
+        "page": "b0eb88d16b556364",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "6577b8e8322d5144",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "75332a85992bfda6",
+        "type": "ui-page",
+        "name": "Cyber security Dashboard",
+        "ui": "6d6697734a385513",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "6577b8e8322d5144",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "97cbab1afa9a08ec",
+        "type": "ui-group",
+        "name": "Factory Monitoring Dashboard",
+        "page": "75332a85992bfda6",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "93f584cd130f0b9d",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "mqtt_config",
+        "type": "mqtt-broker",
+        "name": "Mosquitto Local",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "nodered_dashboard_01",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "ui_base_config",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#1e1e1e",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "dark"
+            }
+        },
+        "site": {
+            "name": "IoT Cyberattack Detection",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "ui_tab_security",
+        "type": "ui_tab",
+        "name": "Security Monitor",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "289aecfe1440c30f",
+        "type": "ui_tab",
+        "name": "Security Monitor",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ui_group_sensor",
+        "type": "ui_group",
+        "name": "Live Sensor Data",
+        "tab": "ui_tab_security",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ui_group_security",
+        "type": "ui_group",
+        "name": "Security Status",
+        "tab": "ui_tab_security",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ui_group_alerts",
+        "type": "ui_group",
+        "name": "Alert Log",
+        "tab": "ui_tab_security",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "ui_group_flood",
+        "type": "ui_group",
+        "name": "Flood & Network Status",
+        "tab": "ui_tab_security",
+        "order": 4,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "a2320ff32af6a62e",
+        "type": "ui_group",
+        "name": "Live Sensor Data",
+        "tab": "ui_tab_security",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f1075a4b92829859",
+        "type": "ui_group",
+        "name": "Security Status",
+        "tab": "ui_tab_security",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "fdee93dc3ca7bba5",
+        "type": "ui_group",
+        "name": "Alert Log",
+        "tab": "ui_tab_security",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "5b809ea6e8cead6d",
+        "type": "ui_group",
+        "name": "Flood & Network Status",
+        "tab": "ui_tab_security",
+        "order": 4,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "mqtt_broker_local",
+        "type": "mqtt-broker",
+        "name": "Local Broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "ui_tab_main",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ui_group_attacks",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "ui_tab_main",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "15be3372f34356cf",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "75332a85992bfda6",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "a7c4cf5e1f44f211",
+        "type": "ui-group",
+        "name": "Attack Simulator Controls",
+        "page": "b0eb88d16b556364",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "df4068f9cea22f1d",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "36cc39723c7d2e9a",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "41dabf18ce08bceb",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "28d533425023cf83",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6832963e6385477e",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "097d8fd02870a064",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f7700613032278d6",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "06ee325a1463097a",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "df4068f9cea22f1d",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ede45ef45e788a43",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "36cc39723c7d2e9a",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ccbc3ee7e94cf9e6",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "41dabf18ce08bceb",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "23db57cf31e5d5d4",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "28d533425023cf83",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "918a8d86aa7f8262",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "6832963e6385477e",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f2eec33be4185762",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "097d8fd02870a064",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "211aa64b3bcd4cfb",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "f7700613032278d6",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ceb496b2ea295ad9",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "a75cb6c42f6ef69a",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a75cb6c42f6ef69a",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8974e207af4696b4",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "e350ab87a321dbb3",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e350ab87a321dbb3",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "990407456c6aa2fb",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "0d63259d202d5519",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0d63259d202d5519",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "40af6c4bf0332dae",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "b478208b000f8846",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b478208b000f8846",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "407581fabf30fbb5",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "95ec5fda55598365",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "95ec5fda55598365",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "34ad98f4229d021b",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "3888395278b60945",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3888395278b60945",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ed117465c79330d5",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "1a180b0f1651c65b",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1a180b0f1651c65b",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "905383ebeb0d9c1d",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "9392ebf6d08128d1",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9392ebf6d08128d1",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9d2003eb1d3fbb6e",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "17682adb4505e55c",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "17682adb4505e55c",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "53c5086f64794446",
+        "type": "ui_group",
+        "name": "Attack Simulator Controls",
+        "tab": "e4350dd0d0e83183",
+        "order": 5,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e4350dd0d0e83183",
+        "type": "ui_tab",
+        "name": "IoT Cyberattack Detection",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7f99e2db2c836af5",
+        "type": "mqtt in",
+        "z": "82ee9f8d53904e9e",
+        "name": "sensors/# (ALL sensor topics)",
+        "topic": "sensors/#",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "mqtt_config",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "8c48447a00d58119"
+            ]
+        ]
+    },
+    {
+        "id": "8c48447a00d58119",
+        "type": "function",
+        "z": "82ee9f8d53904e9e",
+        "name": "Extract sensor fields",
+        "func": "// Guard: payload must be a non-null object\nif (!msg.payload || typeof msg.payload !== 'object') {\n    node.warn('Non-object payload on ' + msg.topic + ': ' + JSON.stringify(msg.payload));\n    return null;\n}\n\nvar data   = msg.payload;\nvar temp   = (data.temperature !== undefined && data.temperature !== null)\n               ? Number(data.temperature) : null;\nvar humid  = (data.humidity !== undefined && data.humidity !== null)\n               ? Number(data.humidity) : null;\nvar device = data.device_id ? String(data.device_id) : 'unknown';\n\n// Output 1: numeric temperature to ui_gauge\nvar tempMsg = null;\nif (temp !== null && !isNaN(temp)) {\n    tempMsg = { payload: temp };\n}\n\n// Output 2: numeric humidity to ui_gauge\nvar humidMsg = null;\nif (humid !== null && !isNaN(humid)) {\n    humidMsg = { payload: humid };\n}\n\n// Output 3: device ID string to ui_text\n// Only update Active Device if this device is NOT in the blocked list\nvar blocked = flow.get('blockedDevices') || {};\nvar deviceMsg = null;\nif (!blocked[device]) {\n    deviceMsg = { payload: device };\n}\n\nreturn [tempMsg, humidMsg, deviceMsg];",
+        "outputs": 3,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 80,
+        "wires": [
+            [
+                "323d44d8e1ec3a59"
+            ],
+            [
+                "6014e8f1597b6bd1"
+            ],
+            [
+                "540af3c3f2230505"
+            ]
+        ]
+    },
+    {
+        "id": "2140e2ddf689eefc",
+        "type": "mqtt in",
+        "z": "82ee9f8d53904e9e",
+        "name": "alerts/cyberattack",
+        "topic": "alerts/cyberattack",
+        "qos": "1",
+        "datatype": "json",
+        "broker": "mqtt_config",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 100,
+        "y": 240,
+        "wires": [
+            [
+                "4b5ec8a2dcbf58b8"
+            ]
+        ]
+    },
+    {
+        "id": "4b5ec8a2dcbf58b8",
+        "type": "function",
+        "z": "82ee9f8d53904e9e",
+        "name": "Process Alert",
+        "func": "var a = msg.payload || {};\nvar type     = String(a.alert_type || 'UNKNOWN');\nvar severity = String(a.severity   || 'WARNING');\nvar ts       = String(a.timestamp  || new Date().toISOString());\nvar device   = String(a.device_id  || a.source || '-');\nvar reason   = String(a.reason     || a.detail || JSON.stringify(a).substring(0, 100));\n\n// Colour by severity\nvar color;\nif      (severity === 'CRITICAL') { color = '#e63946'; }\nelse if (severity === 'WARNING')  { color = '#f4a261'; }\nelse                              { color = '#2a9d8f'; }\n\n// HH:MM:SS from ISO timestamp\nvar timeStr = (ts.length > 19) ? ts.substring(11, 19) : ts;\n\n// Output 1 → counter increment (payload=1, counter fn adds it up)\nvar countMsg = { payload: 1 };\n\n// Output 2 → latest alert ui_text (payload MUST be string)\nvar latestMsg = { payload: '[' + severity + '] ' + type + ' — ' + reason };\n\n// Output 3 → security status ui_text (payload MUST be string)\nvar statusMsg = { payload: severity + ' — ' + type };\n\n// Output 4 → alert log accumulator (carries row fields as top-level props)\nvar tableMsg = {\n    payload:  timeStr + ' | ' + severity + ' | ' + type + ' | ' + device + ' | ' + reason,\n    timeStr:  timeStr,\n    severity: severity,\n    type:     type,\n    device:   device,\n    reason:   reason,\n    color:    color\n};\n\nreturn [countMsg, latestMsg, statusMsg, tableMsg];",
+        "outputs": 4,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 240,
+        "wires": [
+            [
+                "a75fb49beaced24d"
+            ],
+            [
+                "790845771986039b"
+            ],
+            [
+                "64ca60d8390dc3dd"
+            ],
+            [
+                "13982377edb860be"
+            ]
+        ]
+    },
+    {
+        "id": "a75fb49beaced24d",
+        "type": "function",
+        "z": "82ee9f8d53904e9e",
+        "name": "Increment Alert Counter",
+        "func": "var count = context.get('count') || 0;\nif (msg.payload === 'RESET') {\n    count = 0;\n    context.set('count', count);\n    msg.payload = String(count);\n    return msg;\n}\ncount = count + 1;\ncontext.set('count', count);\nmsg.payload = String(count);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 160,
+        "wires": [
+            [
+                "99620ea6798bd76c"
+            ]
+        ]
+    },
+    {
+        "id": "13982377edb860be",
+        "type": "function",
+        "z": "82ee9f8d53904e9e",
+        "name": "Accumulate alert rows",
+        "func": "// Build and store up to 50 alert rows in flow context\nvar rows = flow.get('alertRows') || [];\nrows.unshift({\n    timeStr:  msg.timeStr  || '-',\n    severity: msg.severity || '-',\n    type:     msg.type     || '-',\n    device:   msg.device   || '-',\n    reason:   msg.reason   || '-'\n});\nif (rows.length > 50) rows = rows.slice(0, 50);\nflow.set('alertRows', rows);\nmsg.rows = rows;\nreturn msg;",
+        "outputs": 1,
+        "x": 400,
+        "y": 320,
+        "wires": [
+            [
+                "84cfba0eca0c4cad"
+            ]
+        ]
+    },
+    {
+        "id": "2a957237aca86f51",
+        "type": "mqtt in",
+        "z": "82ee9f8d53904e9e",
+        "name": "alerts/status (engine heartbeat)",
+        "topic": "alerts/status",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "mqtt_config",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 150,
+        "y": 400,
+        "wires": [
+            [
+                "2659710485c54b9d"
+            ]
+        ]
+    },
+    {
+        "id": "2659710485c54b9d",
+        "type": "function",
+        "z": "82ee9f8d53904e9e",
+        "name": "Format Engine Status",
+        "func": "var d = msg.payload || {};\nvar status = d.status || 'unknown';\n\n// Use the blocklist to hide rogue devices\nvar blocked = flow.get('blockedDevices') || {};\nvar allDevices = Array.isArray(d.connected_devices) ? d.connected_devices : [];\nvar cleanDevices = allDevices.filter(function(id) { return !blocked[id]; });\n\n// Count: prefer cleaned list length; fall back to d.device_count minus blocked matches\nvar rawCount = (d.device_count !== undefined) ? Number(d.device_count) : allDevices.length;\nvar blockedInList = allDevices.length - cleanDevices.length;\nvar devices = Math.max(0, rawCount - blockedInList);\n\n// Known Devices list: use cleaned list if available, else just show count\nvar devList;\nif (cleanDevices.length > 0) {\n    devList = cleanDevices.join(', ');\n} else if (devices > 0) {\n    devList = devices + ' device(s) connected';\n} else {\n    devList = 'none';\n}\n\n// Output 1: engine online/offline string\nvar statusMsg  = { payload: (status === 'online') ? 'ONLINE' : 'OFFLINE' };\n\n// Output 2: device count (blocked devices excluded)\nvar deviceMsg  = { payload: String(devices) };\n\n// Output 3: comma-separated clean device list\nvar devListMsg = { payload: devList };\n\nreturn [statusMsg, deviceMsg, devListMsg];",
+        "outputs": 3,
+        "x": 400,
+        "y": 400,
+        "wires": [
+            [
+                "b151b1fb7e22d490"
+            ],
+            [
+                "ab0c3cd5ae4c9e34"
+            ],
+            [
+                "eaf714e902e54ca0"
+            ]
+        ]
+    },
+    {
+        "id": "0384649fff66690c",
+        "type": "mqtt in",
+        "z": "82ee9f8d53904e9e",
+        "name": "sensors/# (rate monitor)",
+        "topic": "sensors/#",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "mqtt_config",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 120,
+        "y": 500,
+        "wires": [
+            [
+                "fcabd9150bd89f52"
+            ]
+        ]
+    },
+    {
+        "id": "fcabd9150bd89f52",
+        "type": "function",
+        "z": "82ee9f8d53904e9e",
+        "name": "Track message rate",
+        "func": "// Sliding 2-second window\nvar now = Date.now();\nvar counts = flow.get(\"msgCounts\") || [];\n\ncounts.push(now);\n\n// Keep only last 2 seconds\ncounts = counts.filter(function (t) {\n    return now - t < 2000;\n});\n\nflow.set(\"msgCounts\", counts);\n\nvar rate = Math.round(counts.length / 2);\n\n// Save flood detection time\nif (rate > 100) {\n    flow.set(\"lastFlood\", now);\n}\n\nvar lastFlood = flow.get(\"lastFlood\") || 0;\n\nvar status;\n\n// Keep warning visible for 10 seconds\nif (now - lastFlood < 10000) {\n    status = \"🚨 FLOOD DETECTED : \" + rate + \" msg/s\";\n}\nelse {\n    status = \"Normal : \" + rate + \" msg/s\";\n}\n\nreturn [\n    { payload: rate, topic: \"msg/s\" },\n    { payload: status }\n];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 500,
+        "wires": [
+            [
+                "63b5aefa491c942d"
+            ],
+            [
+                "b882b3a3710dce0d"
+            ]
+        ]
+    },
+    {
+        "id": "40f262a7838ecdfa",
+        "type": "inject",
+        "z": "82ee9f8d53904e9e",
+        "name": "Initialize Dashboard",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "3a41b6519475a46f"
+            ]
+        ]
+    },
+    {
+        "id": "3a41b6519475a46f",
+        "type": "function",
+        "z": "82ee9f8d53904e9e",
+        "name": "Set default values",
+        "func": "// Push sensible defaults to every widget on startup\n// ui_text requires string payloads; ui_gauge requires numbers\nvar alertCount = { payload: '0' };\nvar latest     = { payload: 'No alerts yet — system is monitoring' };\nvar secStatus  = { payload: 'OK — No threats detected' };\nvar engine     = { payload: 'OFFLINE' };\nvar devCount   = { payload: '0' };\nvar flood      = { payload: 'Normal: 0 msg/s' };\nreturn [[alertCount], [latest], [secStatus], [engine], [devCount], [flood]];",
+        "outputs": 6,
+        "x": 390,
+        "y": 580,
+        "wires": [
+            [
+                "99620ea6798bd76c"
+            ],
+            [
+                "790845771986039b"
+            ],
+            [
+                "64ca60d8390dc3dd"
+            ],
+            [
+                "b151b1fb7e22d490"
+            ],
+            [
+                "ab0c3cd5ae4c9e34"
+            ],
+            [
+                "b882b3a3710dce0d"
+            ]
+        ]
+    },
+    {
+        "id": "540af3c3f2230505",
+        "type": "ui_text",
+        "z": "82ee9f8d53904e9e",
+        "group": "ui_group_sensor",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "name": "Active Device",
+        "label": "Active Device",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 680,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "99620ea6798bd76c",
+        "type": "ui_text",
+        "z": "82ee9f8d53904e9e",
+        "group": "ui_group_security",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "name": "Alert Counter",
+        "label": "Total Alerts",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 670,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "790845771986039b",
+        "type": "ui_text",
+        "z": "82ee9f8d53904e9e",
+        "group": "ui_group_security",
+        "order": 2,
+        "width": "6",
+        "height": "3",
+        "name": "Latest Alert",
+        "label": "Latest Alert",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 670,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "64ca60d8390dc3dd",
+        "type": "ui_text",
+        "z": "82ee9f8d53904e9e",
+        "group": "ui_group_security",
+        "order": 3,
+        "width": "6",
+        "height": "3",
+        "name": "Security Status",
+        "label": "Security Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 680,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b151b1fb7e22d490",
+        "type": "ui_text",
+        "z": "82ee9f8d53904e9e",
+        "group": "ui_group_security",
+        "order": 4,
+        "width": "4",
+        "height": "2",
+        "name": "Engine Status",
+        "label": "Engine",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 680,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ab0c3cd5ae4c9e34",
+        "type": "ui_text",
+        "z": "82ee9f8d53904e9e",
+        "group": "ui_group_security",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "name": "Device Count",
+        "label": "Connected Devices",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 680,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "eaf714e902e54ca0",
+        "type": "ui_text",
+        "z": "82ee9f8d53904e9e",
+        "group": "ui_group_sensor",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "name": "Device List",
+        "label": "Known Devices",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 670,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b882b3a3710dce0d",
+        "type": "ui_text",
+        "z": "82ee9f8d53904e9e",
+        "group": "ui_group_flood",
+        "order": 2,
+        "width": "12",
+        "height": "3",
+        "name": "Flood Status",
+        "label": "Flood Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 670,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "323d44d8e1ec3a59",
+        "type": "ui_gauge",
+        "z": "82ee9f8d53904e9e",
+        "name": "Temperature Gauge",
+        "group": "ui_group_sensor",
+        "order": 1,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "°C",
+        "format": "{{value}}°C",
+        "min": -20,
+        "max": 80,
+        "colors": [
+            "#00b4d8",
+            "#2ec4b6",
+            "#e63946"
+        ],
+        "seg1": 0,
+        "seg2": 60,
+        "diff": false,
+        "className": "",
+        "x": 700,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "63b5aefa491c942d",
+        "type": "ui_chart",
+        "z": "82ee9f8d53904e9e",
+        "name": "Message Rate Chart",
+        "group": "ui_group_flood",
+        "order": 1,
+        "width": "12",
+        "height": "3",
+        "label": "Network Message Rate (msg/s)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Waiting for data...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "200",
+        "removeOlder": "60",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "5",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#00b4d8",
+            "#e63946",
+            "#2ec4b6",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 700,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "84cfba0eca0c4cad",
+        "type": "ui_template",
+        "z": "82ee9f8d53904e9e",
+        "group": "ui_group_alerts",
+        "name": "Alert Log Table",
+        "order": 1,
+        "width": "12",
+        "height": "11",
+        "format": "<style>\n  .at { width:100%; border-collapse:collapse; font-size:13px; font-family:monospace; }\n  .at th { background:#097479; color:#fff; padding:6px 10px; text-align:left; }\n  .at td { padding:5px 10px; border-bottom:1px solid #333; color:#ddd; vertical-align:top; }\n  .at tr:nth-child(even) td { background:#1a1a1a; }\n  .at tr:nth-child(odd)  td { background:#111111; }\n  .CRITICAL { color:#e63946 !important; font-weight:bold; }\n  .WARNING  { color:#f4a261 !important; font-weight:bold; }\n  .INFO     { color:#2a9d8f !important; }\n  .sw { max-height:350px; overflow-y:auto; display:block; }\n</style>\n<div class=\"sw\">\n  <table class=\"at\">\n    <thead><tr><th>Time</th><th>Severity</th><th>Type</th><th>Device</th><th>Detail</th></tr></thead>\n    <tbody>\n      <tr ng-repeat=\"row in msg.rows track by $index\">\n        <td>{{row.timeStr}}</td>\n        <td class=\"{{row.severity}}\">{{row.severity}}</td>\n        <td>{{row.type}}</td>\n        <td>{{row.device}}</td>\n        <td>{{row.reason}}</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 680,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6c07692daaa2f169",
+        "type": "ui_button",
+        "z": "82ee9f8d53904e9e",
+        "name": "Simulate Flood",
+        "group": "53c5086f64794446",
+        "order": 2,
+        "width": "6",
+        "height": "2",
+        "passthru": false,
+        "label": "Simulate Flood Attack (150 msg/s)",
+        "tooltip": "Floods the broker with rapid messages",
+        "color": "#ffffff",
+        "bgcolor": "#f44336",
+        "className": "",
+        "icon": "fa-bolt",
+        "payload": "start",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 820,
+        "wires": [
+            [
+                "d468b324368f3d3e"
+            ]
+        ]
+    },
+    {
+        "id": "6e8ab68080e51e04",
+        "type": "exec",
+        "z": "82ee9f8d53904e9e",
+        "command": "\"C:\\\\Users\\\\sriva\\\\Downloads\\\\iot-cyberattack-detection 2\\\\iot-cyberattack-detection 2\\\\venv\\\\Scripts\\\\python.exe\"",
+        "addpay": false,
+        "append": "\"C:\\\\Users\\\\sriva\\\\Downloads\\\\iot-cyberattack-detection 2\\\\iot-cyberattack-detection 2\\\\attack_simulator\\\\fake_sensor_data.py\"",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Run Fake Data Script",
+        "x": 460,
+        "y": 740,
+        "wires": [
+            [
+                "6b654cb62ae3857c"
+            ],
+            [
+                "32343fbdc736d09d"
+            ],
+            [
+                "6e8c204064ac6209"
+            ]
+        ]
+    },
+    {
+        "id": "d468b324368f3d3e",
+        "type": "exec",
+        "z": "82ee9f8d53904e9e",
+        "command": "\"C:\\\\Users\\\\sriva\\\\Downloads\\\\iot-cyberattack-detection 2\\\\iot-cyberattack-detection 2\\\\venv\\\\Scripts\\\\python.exe\"",
+        "addpay": false,
+        "append": "\"C:\\\\Users\\\\sriva\\\\Downloads\\\\iot-cyberattack-detection 2\\\\iot-cyberattack-detection 2\\\\attack_simulator\\\\flood_attack.py\"",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Run Flood Script",
+        "x": 450,
+        "y": 820,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a8d8948439b60148",
+        "type": "exec",
+        "z": "82ee9f8d53904e9e",
+        "command": "\"C:\\\\Users\\\\sriva\\\\Downloads\\\\iot-cyberattack-detection 2\\\\iot-cyberattack-detection 2\\\\venv\\\\Scripts\\\\python.exe\"",
+        "addpay": false,
+        "append": "\"C:\\\\Users\\\\sriva\\\\Downloads\\\\iot-cyberattack-detection 2\\\\iot-cyberattack-detection 2\\\\attack_simulator\\\\rogue_device.py\"",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Run Rogue Script",
+        "x": 450,
+        "y": 900,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "32343fbdc736d09d",
+        "type": "debug",
+        "z": "82ee9f8d53904e9e",
+        "name": "python erroe",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "6b654cb62ae3857c",
+        "type": "debug",
+        "z": "82ee9f8d53904e9e",
+        "name": "python output",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "6e8c204064ac6209",
+        "type": "debug",
+        "z": "82ee9f8d53904e9e",
+        "name": "exit code",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "complete message object",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "7f7f10d1af6b5ba6",
+        "type": "mqtt out",
+        "z": "82ee9f8d53904e9e",
+        "name": "",
+        "topic": "",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_config",
+        "x": 1430,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "6e873b334f9d62f6",
+        "type": "ui_button",
+        "z": "82ee9f8d53904e9e",
+        "name": "block flood attack",
+        "group": "53c5086f64794446",
+        "order": 1,
+        "width": "6",
+        "height": "2",
+        "passthru": false,
+        "label": "block flood attack",
+        "tooltip": "Injects out-of-range sensor values",
+        "color": "#ffffff",
+        "bgcolor": "#ff9800",
+        "className": "",
+        "icon": "fa-warning",
+        "payload": "block",
+        "payloadType": "str",
+        "topic": "commands/block_flood",
+        "topicType": "msg",
+        "x": 1030,
+        "y": 580,
+        "wires": [
+            [
+                "d96fe8af34438295"
+            ]
+        ]
+    },
+    {
+        "id": "3b882ce48fa14292",
+        "type": "change",
+        "z": "82ee9f8d53904e9e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "commands/block_fake_data",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "BLOCK",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "kill",
+                "pt": "msg",
+                "to": "SIGTERM",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1220,
+        "y": 290,
+        "wires": [
+            [
+                "7f7f10d1af6b5ba6",
+                "650f0f33b578e2fe",
+                "6e8ab68080e51e04",
+                "2a5869945a52f699"
+            ]
+        ]
+    },
+    {
+        "id": "4bb5b8a88abec503",
+        "type": "mqtt out",
+        "z": "82ee9f8d53904e9e",
+        "name": "",
+        "topic": "commands/block_flood",
+        "qos": "",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_config",
+        "x": 1420,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "03ee2e588b102003",
+        "type": "change",
+        "z": "82ee9f8d53904e9e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "commands/block_rogue",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "BLOCK",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "kill",
+                "pt": "msg",
+                "to": "SIGTERM",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1220,
+        "y": 220,
+        "wires": [
+            [
+                "7f7f10d1af6b5ba6",
+                "650f0f33b578e2fe",
+                "a8d8948439b60148",
+                "2a5869945a52f699"
+            ]
+        ]
+    },
+    {
+        "id": "650f0f33b578e2fe",
+        "type": "debug",
+        "z": "82ee9f8d53904e9e",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1420,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "d96fe8af34438295",
+        "type": "change",
+        "z": "82ee9f8d53904e9e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "commands/block_flood",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "BLOCK",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "kill",
+                "pt": "msg",
+                "to": "SIGTERM",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 360,
+        "wires": [
+            [
+                "4bb5b8a88abec503",
+                "d468b324368f3d3e",
+                "2a5869945a52f699"
+            ]
+        ]
+    },
+    {
+        "id": "6014e8f1597b6bd1",
+        "type": "ui_gauge",
+        "z": "82ee9f8d53904e9e",
+        "name": "Humidity Gauge",
+        "group": "ui_group_sensor",
+        "order": 2,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#2a9d8f",
+            "#e9c46a",
+            "#f4a261"
+        ],
+        "seg1": "30",
+        "seg2": "70",
+        "diff": false,
+        "className": "",
+        "x": 880,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "1cca986902132b77",
+        "type": "function",
+        "z": "82ee9f8d53904e9e",
+        "name": "Reset Dashboard UI",
+        "func": "// Clear flow context alertRows\nflow.set('alertRows', []);\n// Clear flow context msgCounts (for rate monitor)\nflow.set('msgCounts', []);\nflow.set('lastFlood', 0);\n\nvar alertReset = { payload: 'RESET' };\nvar latest     = { payload: 'No alerts yet — system is monitoring' };\nvar secStatus  = { payload: 'OK — No threats detected' };\nvar devCount   = { payload: '1' };\nvar devList    = { payload: 'pico-001' };\nvar flood      = { payload: 'Normal : 0 msg/s' };\nvar tableMsg   = { rows: [], payload: [] };\nvar activeDev  = { payload: 'pico-001' };\n\nreturn [alertReset, latest, secStatus, devCount, devList, flood, tableMsg, activeDev];",
+        "outputs": 8,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 280,
+        "wires": [
+            [
+                "a75fb49beaced24d"
+            ],
+            [
+                "790845771986039b"
+            ],
+            [
+                "64ca60d8390dc3dd"
+            ],
+            [
+                "ab0c3cd5ae4c9e34"
+            ],
+            [
+                "eaf714e902e54ca0"
+            ],
+            [
+                "b882b3a3710dce0d"
+            ],
+            [
+                "84cfba0eca0c4cad"
+            ],
+            [
+                "540af3c3f2230505"
+            ]
+        ]
+    },
+    {
+        "id": "2a5869945a52f699",
+        "type": "function",
+        "z": "82ee9f8d53904e9e",
+        "name": "Build Block Status",
+        "func": "// Determine which attack was blocked from the topic\nvar topic = msg.topic || '';\nvar label;\nvar rogueId = null;\nif      (topic.indexOf('rogue')     !== -1) { label = 'Rogue Device';      rogueId = msg._rogueId || 'rogue-device-99'; }\nelse if (topic.indexOf('flood')     !== -1) { label = 'Flood Attack'; }\nelse if (topic.indexOf('fake_data') !== -1) { label = 'Fake Sensor Data'; }\nelse                                         { label = 'Attack'; }\n\n// Register blocked device IDs so Extract sensor fields ignores them\nif (rogueId) {\n    var blocked = flow.get('blockedDevices') || {};\n    blocked[rogueId] = true;\n    // Also block common rogue IDs generically\n    blocked['rogue-device-99'] = true;\n    flow.set('blockedDevices', blocked);\n}\n\nvar ts = new Date().toLocaleTimeString();\n\n// ISO for row timeStr (HH:MM:SS)\nvar now = new Date();\nvar timeStr = now.toTimeString().substring(0, 8);\n\n// Output 1 -> Security Status widget\nvar statusMsg = { payload: 'BLOCKED — ' + label + ' stopped at ' + ts };\n\n// Output 2 -> Latest Alert widget\nvar latestMsg = { payload: '[BLOCKED] ' + label + ' — mitigation applied at ' + ts };\n\n// Output 3 -> Reset Active Device back to the legitimate device\nvar deviceMsg = { payload: 'pico-001' };\n\n// Output 4 -> Inject a BLOCKED row into the alert log (keeps existing rows)\nvar tableMsg = {\n    payload:  timeStr + ' | INFO | BLOCKED | dashboard | ' + label + ' attack stopped',\n    timeStr:  timeStr,\n    severity: 'INFO',\n    type:     'BLOCKED',\n    device:   'dashboard',\n    reason:   label + ' attack stopped by operator',\n    color:    '#2a9d8f'\n};\n\nreturn [statusMsg, latestMsg, deviceMsg, tableMsg];",
+        "outputs": 4,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 290,
+        "wires": [
+            [
+                "64ca60d8390dc3dd"
+            ],
+            [
+                "790845771986039b"
+            ],
+            [
+                "540af3c3f2230505"
+            ],
+            [
+                "13982377edb860be"
+            ]
+        ]
+    },
+    {
+        "id": "mqtt_alert_email",
+        "type": "mqtt in",
+        "z": "82ee9f8d53904e9e",
+        "name": "Cyberattack Alerts",
+        "topic": "alerts/cyberattack",
+        "qos": "1",
+        "datatype": "json",
+        "broker": "mqtt_config",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 100,
+        "y": 1100,
+        "wires": [
+            [
+                "format_email_alert"
+            ]
+        ]
+    },
+    {
+        "id": "format_email_alert",
+        "type": "function",
+        "z": "82ee9f8d53904e9e",
+        "name": "Format Email",
+        "func": "var a = msg.payload || {};\n\nmsg.topic = '🚨 IoT Cyberattack Detected';\n\nmsg.payload =\n'IoT Cyberattack Detection System\\n\\n' +\n'Attack Type : ' + (a.alert_type || 'Unknown') + '\\n' +\n'Severity    : ' + (a.severity || 'Unknown') + '\\n' +\n'Device ID   : ' + (a.device_id || '-') + '\\n' +\n'Reason      : ' + (a.reason || '-') + '\\n' +\n'Timestamp   : ' + (a.timestamp || new Date().toLocaleString()) + '\\n\\n' +\n'This alert was generated automatically by the IoT Cyberattack Detection Engine.\\n\\n' +\n'Please investigate immediately.';\n\nreturn msg;",
+        "outputs": 1,
+        "x": 370,
+        "y": 1100,
+        "wires": [
+            [
+                "email_node",
+                "email_debug"
+            ]
+        ]
+    },
+    {
+        "id": "email_debug",
+        "type": "debug",
+        "z": "82ee9f8d53904e9e",
+        "name": "Email Preview",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 640,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "email_node",
+        "type": "e-mail",
+        "z": "82ee9f8d53904e9e",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": false,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "cyberattack7961@gmail.com",
+        "dname": "Send Email Alert",
+        "x": 630,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "attack_notification_mqtt",
+        "type": "mqtt in",
+        "z": "82ee9f8d53904e9e",
+        "name": "Attack Alert Notification",
+        "topic": "alerts/cyberattack",
+        "qos": "1",
+        "datatype": "json",
+        "broker": "mqtt_config",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 120,
+        "y": 980,
+        "wires": [
+            [
+                "format_attack_notification"
+            ]
+        ]
+    },
+    {
+        "id": "format_attack_notification",
+        "type": "function",
+        "z": "82ee9f8d53904e9e",
+        "name": "Format Dashboard Notification",
+        "func": "var a = msg.payload || {};\n\nvar type = a.alert_type || \"UNKNOWN_ATTACK\";\nvar severity = a.severity || \"WARNING\";\nvar device = a.device_id || \"-\";\nvar reason = a.reason || \"Cyberattack detected\";\n\nmsg.payload =\n    \"🚨 IoT Cyberattack Detected\\n\\n\" +\n    \"Severity: \" + severity + \"\\n\" +\n    \"Attack: \" + type + \"\\n\" +\n    \"Device: \" + device + \"\\n\" +\n    \"Reason: \" + reason;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 980,
+        "wires": [
+            [
+                "dashboard_attack_notification",
+                "notification_debug"
+            ]
+        ]
+    },
+    {
+        "id": "dashboard_attack_notification",
+        "type": "ui_toast",
+        "z": "82ee9f8d53904e9e",
+        "position": "top right",
+        "displayTime": "8",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Cyberattack Popup Notification",
+        "x": 720,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "notification_debug",
+        "type": "debug",
+        "z": "82ee9f8d53904e9e",
+        "name": "Notification Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 700,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "df3c501e061a2a84",
+        "type": "ui_button",
+        "z": "82ee9f8d53904e9e",
+        "name": "Block Rogue Device",
+        "group": "53c5086f64794446",
+        "order": 1,
+        "width": "6",
+        "height": "2",
+        "passthru": false,
+        "label": "Block Rogue Device",
+        "tooltip": "Injects out-of-range sensor values",
+        "color": "#ffffff",
+        "bgcolor": "#ff9800",
+        "className": "",
+        "icon": "fa-warning",
+        "payload": "block",
+        "payloadType": "str",
+        "topic": "commands/block_rogue",
+        "topicType": "msg",
+        "x": 1000,
+        "y": 100,
+        "wires": [
+            [
+                "03ee2e588b102003"
+            ]
+        ]
+    },
+    {
+        "id": "464515138444c08f",
+        "type": "ui_button",
+        "z": "82ee9f8d53904e9e",
+        "name": "Simulate Rogue Device",
+        "group": "53c5086f64794446",
+        "order": 3,
+        "width": "6",
+        "height": "2",
+        "passthru": false,
+        "label": "Simulate Unauthorized Device",
+        "tooltip": "Publishes data from an unregistered client ID",
+        "color": "#ffffff",
+        "bgcolor": "#ff5722",
+        "className": "",
+        "icon": "fa-user-secret",
+        "payload": "start",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 900,
+        "wires": [
+            [
+                "a8d8948439b60148"
+            ]
+        ]
+    },
+    {
+        "id": "8d15763911026a1f",
+        "type": "ui_button",
+        "z": "82ee9f8d53904e9e",
+        "name": "Block Fake Data",
+        "group": "53c5086f64794446",
+        "order": 1,
+        "width": "6",
+        "height": "2",
+        "passthru": false,
+        "label": "Block Fake Data Attack",
+        "tooltip": "Sends command to block fake data anomalies",
+        "color": "#ffffff",
+        "bgcolor": "#ff9800",
+        "className": "",
+        "icon": "fa-shield",
+        "payload": "block",
+        "payloadType": "str",
+        "topic": "commands/block_fake_data",
+        "topicType": "msg",
+        "x": 1220,
+        "y": 620,
+        "wires": [
+            [
+                "3b882ce48fa14292"
+            ]
+        ]
+    },
+    {
+        "id": "bbb9e83b695d7ae0",
+        "type": "ui_button",
+        "z": "82ee9f8d53904e9e",
+        "name": "Simulate Fake Data",
+        "group": "53c5086f64794446",
+        "order": 1,
+        "width": "6",
+        "height": "2",
+        "passthru": false,
+        "label": "Simulate Fake Data Attack",
+        "tooltip": "Injects out-of-range sensor values",
+        "color": "#ffffff",
+        "bgcolor": "#f44336",
+        "className": "",
+        "icon": "fa-warning",
+        "payload": "start",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 740,
+        "wires": [
+            [
+                "6e8ab68080e51e04"
+            ]
+        ]
+    },
+    {
+        "id": "0a68be506721f3ad",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.30.2",
+            "node-red-dashboard": "3.6.6",
+            "node-red-node-email": "5.2.4"
+        }
+    }
+]
