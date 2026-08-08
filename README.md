@@ -550,7 +550,7 @@ Future versions can include:
 
 # 👨‍💻 Author
 
-**Sai Rohan**
+**D.Sai Rohan**
 
 Kakatiya Institute of Technology and Science, Warangal
 
